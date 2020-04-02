@@ -1,7 +1,7 @@
 var simplemaps_worldmap_mapdata={
   main_settings: {
     //General settings
-		width: "700", //or 'responsive'
+		width: "responsive",
     background_color: "#FFFFFF",
     background_transparent: "yes",
     popups: "detect",
@@ -38,13 +38,13 @@ var simplemaps_worldmap_mapdata={
     hide_labels: "no",
    
 		//Zoom settings
-		manual_zoom: "no",
+		manual_zoom: "yes",
     back_image: "no",
     arrow_box: "no",
     navigation_size: "40",
     navigation_color: "#f7f7f7",
     navigation_border_color: "#636363",
-    initial_back: "no",
+    initial_back: "yes",
     initial_zoom: -1,
     initial_zoom_solo: "no",
     region_opacity: 1,
@@ -1570,7 +1570,7 @@ var simplemaps_worldmap_mapdata={
       hover_color: "default",
       url: "default"
     }
-  },
+  }/*,
   locations: {
     "0": {
       name: "Paris",
@@ -1579,24 +1579,7 @@ var simplemaps_worldmap_mapdata={
       color: "default",
       description: "default",
       url: "default"
-    },
-    "1": {
-      name: "Tokyo",
-      lat: "35.666666670",
-      lng: "139.750000000",
-      color: "default",
-      description: "default",
-      url: "default"
-    },
-    "3": {
-      name: "New York",
-      lat: "40.71",
-      lng: "-74.0059731",
-      description: "default",
-      color: "default",
-      url: "default",
-      size: "default"
     }
-  },
+  }*/,
   labels: {}
 };
