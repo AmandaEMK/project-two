@@ -61,11 +61,13 @@ var simplemaps_worldmap_mapdata={
                 div: "worldmap",
             auto_load: "no",
             rotate: "0",
-            url_new_tab: "yes",
+            url_new_tab: "no",
             images_directory: "default",
             import_labels: "no",
             fade_time: 0.1,
-            link_text: "View Website"
+            url: "",
+            state_url: "",
+            link_text: "More data"
         },
         state_specific: mapCountryList,
         labels: {}
