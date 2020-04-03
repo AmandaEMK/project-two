@@ -1,9 +1,12 @@
-p {
+p, span, div, li {
  font-family: 'PT sans', serif;
 }
 
 h1 {
  font-family: 'DM Serif Display', sans-serif;
+ font-size: 6vmin; 
+ letter-spacing: 0.05em;
+ padding: 20px;
 }
 
 .text-center {

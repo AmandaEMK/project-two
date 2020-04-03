@@ -15,40 +15,33 @@
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<nav class="navbar navbar-expand-lg navbar-light">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="navbar-toggler-icon"></span>
 				</button> <a class="navbar-brand" href="#">COVID-19 news and stats</a>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="navbar-nav">
-						<li class="nav-item active">
-							 <a class="nav-link" href="#">Link 1<span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							 <a class="nav-link" href="#">Link 2</a>
-						</li>
-					</ul>
 					<ul class="navbar-nav ml-md-auto">
 						<li class="nav-item active">
-							 <a class="nav-link" href="#">Link 3<span class="sr-only">(current)</span></a>
+							 <a class="nav-link" href="#map">Map<span class="sr-only">(current)</span></a>
 						</li>
-						<li class="nav-item dropdown">
-							 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link 2</a>
-							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-								 <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-								<div class="dropdown-divider">
-								</div> <a class="dropdown-item" href="#">Separated link</a>
-							</div>
+                        <li class="nav-item">
+							 <a class="nav-link" href="#news">News</a>
+						</li>
+                        <li class="nav-item">
+							 <a class="nav-link" href="#about">About</a>
+						</li>
+                        <li class="nav-item">
+							 <a class="nav-link" href="#contact">Contact</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 			<div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center">COVID-19 world map</h1>
+                    <h1 class="text-center" id="map">COVID-19 world map</h1>
 				</div>
 				<div class="col-md-8">
-                    <div id="map"></div>
+                    <div id="worldmap"></div>
 				</div>
 				<div class="col-md-4">
 				</div>
@@ -57,28 +50,31 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-            <h1 class="text-center">Latest news</h1>
+            <h1 class="text-center" id="news">Latest news</h1>
 		</div>
 		<div class="col-md-12">
 		</div>
 	</div>
 	<div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">About</h1>
+            <h1 class="text-center" id="about">About</h1>
 		</div>
 		<div class="col-md-12">
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates perspiciatis officia voluptas pariatur minus autem quisquam vero! Eaque, illo molestias officia, sed voluptatibus minus iure quis accusantium architecto quam odit!</p>
 		</div>
 	</div>
 	<div class="row">
     	<div class="col-md-12">
-            <h1 class="text-center">Contact</h1>
+            <h1 class="text-center" id="contact">Contact</h1>
 		</div>
 		<div class="col-md-12">
+            <p  class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta exercitationem incidunt qui blanditiis laboriosam. Aut reiciendis pariatur possimus itaque eos consectetur? Libero et natus nesciunt inventore autem! Et, repellat nesciunt.</p>
 		</div>
 	</div>
 </div>
 <script type="text/javascript" src="scripts/mapdata.js"></script>		
 <script  type="text/javascript" src="scripts/worldmap.js"></script>
 <script  type="text/javascript" src="scripts/countrydata.js"></script>
+<script  type="text/javascript" src="scripts/news.js"></script>
 </body>
 </html>
