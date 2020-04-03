@@ -1,3 +1,11 @@
+p {
+ font-family: 'PT sans', serif;
+}
+
+h1 {
+ font-family: 'DM Serif Display', sans-serif;
+}
+
 .text-center {
   text-align: center;
 }
