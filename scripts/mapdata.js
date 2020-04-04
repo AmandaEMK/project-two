@@ -65,9 +65,8 @@ var simplemaps_worldmap_mapdata={
             images_directory: "default",
             import_labels: "no",
             fade_time: 0.1,
-            url: "", // run chart script again here but for mobile????
+            url: "", 
             state_url: "",
-            link_text: "More data"
         },
         state_specific: mapCountryList,
         labels: {}

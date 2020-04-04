@@ -23,7 +23,7 @@ $.ajax({
             description: "Confirmed cases: " + countries[i].totalConfirmedCases + "<br>Deaths: " + countries[i].totalDeaths + "<br>Recovered: " + countries[i].totalRecoveredCases,
             color: "#88A4BC",
             hover_color: "default",
-            url: "#" + isoCode
+            url: ""
         };
         
 
@@ -60,7 +60,7 @@ function loadCountryData(id) {
         },
     })
 .done(function (data) {
-    console.log(data);
+    
     
     var chartDataConfirmed = [];
     var chartDataDeaths = [];
@@ -71,7 +71,7 @@ function loadCountryData(id) {
     var firstDay = null;
 
     for (var i=0; i<history.length; i++) {
-        console.log(history[i]);
+        
         var pointConfirmed = [new Date(history[i].date).getTime(), history[i].confirmed];
         chartDataConfirmed.push(pointConfirmed);
         if (history[i].deaths > 0) {
@@ -118,3 +118,9 @@ function loadCountryData(id) {
     alert("Error");
 });
 }
+
+// Fix chart "dissappearing" when on mobile
+window.addEventListener("resize", function(){
+    var height = $("#country-chart").height();
+    $(".chart-container").height(height);
+});
