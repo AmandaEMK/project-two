@@ -33,6 +33,15 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
+- [SimpleMaps](https://simplemaps.com/resources/free-world-map)
+    - The project uses **SimpleMaps**'s interactive HTML5/Javascript world map.
+
+- [Flot](https://www.flotcharts.org)
+    - The project uses **Flot** to create charts.
+
+- [Smartable AI COVID-19 data & news API](https://developer.smartable.ai/signup)
+    - The project uses data from this API.
+
 
 ## Testing
 
@@ -80,6 +89,5 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 - I received inspiration for this project from X
 - Wireframes made using https://balsamiq.cloud/
-- https://developer.smartable.ai/signup - stats and news api, javascript code 
-- https://simplemaps.com/resources/free-world-map - world map, javascript code
 - https://www.layoutit.com/ - bootstrap grid generator
+- https://www.w3schools.com/ - 
