@@ -20,7 +20,7 @@ $.ajax({
         var isoCode = countries[i].location.isoCode;
         var country = {
             name: countryName,
-            description: "Total confirmed cases: " + countries[i].totalConfirmedCases + "<br>Total deaths: " + countries[i].totalDeaths + "<br>Total recovered: " + countries[i].totalRecoveredCases,
+            description: "Confirmed cases: " + countries[i].totalConfirmedCases + "<br>Deaths: " + countries[i].totalDeaths + "<br>Recovered: " + countries[i].totalRecoveredCases,
             color: "#88A4BC",
             hover_color: "default",
             url: "#" + isoCode
@@ -63,26 +63,58 @@ function loadCountryData(id) {
     console.log(data);
     
     var chartDataConfirmed = [];
+    var chartDataDeaths = [];
+    var chartDataRecovered = [];
 
     var history = data.stats.history;
 
+    var firstDay = null;
+
     for (var i=0; i<history.length; i++) {
         console.log(history[i]);
-        var point = [new Date(history[i].date).getTime(), history[i].confirmed];
-        chartDataConfirmed.push(point);
+        var pointConfirmed = [new Date(history[i].date).getTime(), history[i].confirmed];
+        chartDataConfirmed.push(pointConfirmed);
+        if (history[i].deaths > 0) {
+            var pointDeaths = [new Date(history[i].date).getTime(), history[i].deaths];
+            chartDataDeaths.push(pointDeaths);
+        }
+        
+        if (history[i].recovered > 0) {
+            var pointRecovered = [new Date(history[i].date).getTime(), history[i].recovered];
+            chartDataRecovered.push(pointRecovered);
+        }
+
+        if (firstDay == null && history[i].confirmed>0) {
+            firstDay = new Date(history[i].date).getTime();
+        }
     }
 
-    $.plot("#country-chart", [chartDataConfirmed], {
+    $.plot("#country-chart", [
+        {
+            data: chartDataConfirmed, label: "Confirmed cases"
+        },
+        {
+            data: chartDataDeaths, label: "Deaths"
+        },
+        {
+            data: chartDataRecovered, label: "Recovered"
+        }
+    ], {
 				xaxis: {
 					mode: "time",
                     //timeformat: "%y-%m-%dT%H:%M:%S",
                     timeBase: "milliseconds",
-					//autoScale: "none"
-				}
+                    //autoScale: "none"
+                    min: firstDay
+                },
+                yaxis: [
+                    {min:0}, {min:0}, {min:0}
+                ],
+                legend: {position:"nw"}
             });
             
 })
 .fail(function () {
-    alert("error");
+    alert("Error");
 });
 }

@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.canvas.min.js" integrity="sha256-H3+iRgXR4u2EQCjz1OofbPM94MAqV2fd/nuN8e+ElGg=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.colorhelpers.min.js" integrity="sha256-aKV30ipRHlX6U0TrhFpWbgb2Zb6AvOutNWxTTR3cIn8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.min.js" integrity="sha256-gCrSjRo/Z6W7Cfc1oEL6BH8HKjgiiO+ItV8A+z9Scpw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js" integrity="sha256-EM0o7Qv7O213xqRbn8IFc6QsSr02kAX1/z7musSfxx8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=PT+Sans&display=swap');</style>
@@ -25,7 +26,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="navbar-nav ml-md-auto">
 						<li class="nav-item active">
-							 <a class="nav-link" href="#map">Map<span class="sr-only">(current)</span></a>
+							 <a class="nav-link" href="#map">Map</a>
 						</li>
                         <li class="nav-item">
 							 <a class="nav-link" href="#news">News</a>
@@ -51,7 +52,9 @@
                     </div>
 				</div>
 				<div class="col-md-4">
-                    <div id="country-chart"></div>
+                    <div class="chart-container">
+                        <div id="country-chart"></div>
+                    </div>
 				</div>
 			</div>
 		</div>
