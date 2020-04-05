@@ -19,19 +19,18 @@ $.ajax({
     $("#newsArticleTemplate").remove();
 
     for (let i=0;i<news.length;i++) {
-        let newsItem=news[i].images.url + news[i].webURl;
-        
         let newsArticle = $(newsArticleClone).clone();
         console.log(newsArticle);
         $(newsArticle).find(".card-title").html(news[i].title);
         $(newsArticle).find(".card-text").html(news[i].excerpt);
-        $(newsArticle).find(".card-img-top").attr("src",news[i].images.url);
+        $(newsArticle).find(".card-img-top").attr("src",news[i].images[0].url);
+        $(newsArticle).find(".article-url").attr("href",news[i].webUrl);
         $(newsArticle).find(".time-stamp").html(news[i].publishedDateTime);
         $(newsArticle).find(".news-outlet").html(news[i].provider.name).attr("href","https://" + news[i].provider.domain);
         $(newsArticle).appendTo("#newsArticles");
         articles++;
 
-        if (articles > 24) {
+        if (articles > 5) {
             break;
         }
     }
