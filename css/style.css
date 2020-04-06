@@ -55,11 +55,6 @@ section.row {
 
 /* For news  --------------------------------------------------------------------------- */
 
-.card-description {
-  overflow: hidden;
-  height:50px;
-}
-
 .card-img-top {
     width: 100%;
     height: 15vw;
