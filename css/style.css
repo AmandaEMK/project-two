@@ -1,24 +1,25 @@
 /* General styling --------------------------------------------------------------------------- */
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 p, span, div, li {
- font-family: 'PT sans', serif;
+    font-family: 'PT sans', serif;
 }
 
 h1 {
- font-family: 'DM Serif Display', sans-serif;
- font-size: 7.5vmin; 
- letter-spacing: 0.05em;
- padding: 20px;
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 7.5vmin; 
+    letter-spacing: 0.05em;
+    padding: 20px;
 }
 
 /* Navbar styling --------------------------------------------------------------------------- */
 
 .custom-navbar {
-    background-color:#ffffff!important;
+    background-color:#ffffff;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
 }
 
 /* Body top-padding to ensure navbar doesn't cover site contents
@@ -53,6 +54,11 @@ article.row, aside.row {
 }
 
 /* For news  --------------------------------------------------------------------------- */
+
+.card-description {
+  overflow: hidden;
+  height:50px;
+}
 
 .card-img-top {
     width: 100%;

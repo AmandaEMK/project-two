@@ -50,8 +50,15 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Fontawesome]( https://fontawesome.com/start)
     - Icons for the news articles
 
+    - Wireframes made using https://balsamiq.cloud/
+    
+    - https://www.layoutit.com/ - Used this bootstrap grid generator for the basic layout to save myself some time
+
 
 ## Testing
+
+* Validate html and css
+* basic jasmine to show i get it
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -85,12 +92,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
-
 ### Acknowledgements
 
 - I received inspiration for this project from X
-- Wireframes made using https://balsamiq.cloud/
-- https://www.layoutit.com/ - Used this bootstrap grid generator for the basic layout to save myself some time
 - https://www.w3schools.com/ - 
