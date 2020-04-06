@@ -4,7 +4,8 @@ A website displaying COVID-19 stats country by country on a world map. Data comi
  
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+Use this section to provide insight into your UX process, focusing on who this website is for,
+what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 - As a user type, I want to perform an action, so that I can achieve a goal.
@@ -13,9 +14,12 @@ You can find the wiresframes for the project in the wireframes folder.
 
 ## Features
 
-The main part of the project is the interactive world map displaying the latest COVID-19 data. When you hover a country, you can see the latest stats in a pop-up. If you click a country, a chart will load displaying historic stats.
+The main part of the project is the interactive world map displaying the latest COVID-19 data.
+When you hover a country, you can see the latest stats in a pop-up. If you click a country, a chart will load displaying historic stats.
 
-There is also a news section displaying a selection of the latest news on COVID-19. About for more info and giving credit to sources, and contact in case someone would have something to say.
+There is also a news section displaying a selection of the latest UK news on COVID-19.
+
+About for more info and giving credit to sources, and contact in case someone would have something to say.
  
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
@@ -30,41 +34,46 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+    - To make DOM manipulation easier
 
 - [SimpleMaps](https://simplemaps.com/resources/free-world-map)
-    - The project uses **SimpleMaps**'s interactive HTML5/Javascript world map.
+    - SimpleMaps interactive HTML5/Javascript world map is used
 
 - [Flot](https://www.flotcharts.org)
-    - The project uses **Flot** to create charts.
+    - To easily create nice lookings charts
 
 - [Smartable AI COVID-19 data & news API](https://developer.smartable.ai/)
-    - The project uses data from this API.
+    - This API provides all the stats for the world map, and also the news
 
 - [Bootstrap 4.4](https://getbootstrap.com/)
     - To make styling easier
 
-- [Fontawesome]( https://fontawesome.com/start)
-    - Icons for the news articles
+- [Fontawesome](https://fontawesome.com/start)
+    - Icons for the news articles are from here
 
-    - Wireframes made using https://balsamiq.cloud/
+- [Balsamiq](https://balsamiq.cloud/)
+    - Created my wireframes using Balsamiq
     
-    - https://www.layoutit.com/ - Used this bootstrap grid generator for the basic layout to save myself some time
+- [Layoutit](https://www.layoutit.com/)
+     - Used this bootstrap grid generator for the basic layout to save myself some time
 
 
 ## Testing
 
-* Validate html and css
+CSS and HTML comes back error free when run through [W3C Markup Validation Service](https://validator.w3.org/)
+
 * basic jasmine to show i get it
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well.
+Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended,
+with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach,
+link to the test file(s) and explain how to run them.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant.
+A particularly useful form for describing your testing process is via scenarios, such as:
 
 1. Contact form:
     1. Go to the "Contact Us" page
@@ -80,14 +89,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+This project is hosted on GitHub pages and deployed from the master branch.
 
 
 ## Credits
