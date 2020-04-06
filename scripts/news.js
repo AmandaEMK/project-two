@@ -17,6 +17,7 @@ $.ajax({
         xhrObj.setRequestHeader("Subscription-Key", "d00c7834e9704372bad71fff4f715467");
         },
     })
+
 .done(function (data) {
     console.log(data);
     let news = data.news;
@@ -48,5 +49,5 @@ $.ajax({
 })
 
 .fail(function () {
-    document.write("Error: News could not be loaded");
+    console.log("Error");
 });

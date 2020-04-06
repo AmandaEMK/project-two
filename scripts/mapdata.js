@@ -1,4 +1,4 @@
-//This code is from Simplemaps.com
+//This code is from SimpleMaps
 
 let mapCountryList = {};
 
