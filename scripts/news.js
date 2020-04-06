@@ -1,3 +1,5 @@
+//Fix zeros missing in date on news
+
 function addLeadingZeroes(n) {
     if(n < 10) {
         return "0" + n;
@@ -46,5 +48,5 @@ $.ajax({
 })
 
 .fail(function () {
-    console.log("Error: News cannot be displayed at this moment");
+    document.write("Error: News could not be loaded");
 });

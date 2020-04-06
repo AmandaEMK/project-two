@@ -1,4 +1,5 @@
 //This code is from Simplemaps.com
+
 let mapCountryList = {};
 
 let simplemaps_worldmap_mapdata={
