@@ -25,7 +25,10 @@ $.ajax({
         $(newsArticle).find(".card-text").html(news[i].excerpt);
         $(newsArticle).find(".card-img-top").attr("src",news[i].images[0].url);
         $(newsArticle).find(".article-url").attr("href",news[i].webUrl);
-        $(newsArticle).find(".time-stamp").html(news[i].publishedDateTime);
+        
+        let date = new Date(news[i].publishedDateTime);
+        let dateString = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes();
+        $(newsArticle).find(".time-stamp").html(dateString);
         $(newsArticle).find(".news-outlet").html(news[i].provider.name).attr("href","https://" + news[i].provider.domain);
         $(newsArticle).appendTo("#newsArticles");
         articles++;
