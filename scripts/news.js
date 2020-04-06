@@ -1,3 +1,10 @@
+function addLeadingZeroes(n) {
+    if(n < 10) {
+        return "0" + n;
+    }
+    return n;
+}
+
 $.ajax({
     type: "GET",
     url: "https://api.smartable.ai/coronavirus/news/GB",
@@ -25,9 +32,8 @@ $.ajax({
         $(newsArticle).find(".card-text").html(news[i].excerpt);
         $(newsArticle).find(".card-img-top").attr("src",news[i].images[0].url);
         $(newsArticle).find(".article-url").attr("href",news[i].webUrl);
-        
         let date = new Date(news[i].publishedDateTime);
-        let dateString = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes();
+        let dateString = date.getFullYear() + "-" + addLeadingZeroes(date.getMonth()+1) + "-" + addLeadingZeroes(date.getDate()) + " " + addLeadingZeroes(date.getHours()) + ":" + addLeadingZeroes(date.getMinutes());
         $(newsArticle).find(".time-stamp").html(dateString);
         $(newsArticle).find(".news-outlet").html(news[i].provider.name).attr("href","https://" + news[i].provider.domain);
         $(newsArticle).appendTo("#newsArticles");
@@ -40,5 +46,5 @@ $.ajax({
 })
 
 .fail(function () {
-    alert("Error");
+    console.log("Error: News cannot be displayed at this moment");
 });

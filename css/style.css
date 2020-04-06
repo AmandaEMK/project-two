@@ -44,10 +44,23 @@ h1 {
     background-color:#ffffff!important;
 }
 
+.fa-newspaper{
+    margin-left:8px;
+}
+
+article.row, aside.row {
+    padding-top:1.5rem;
+}
+
 @media (max-width: 767.98px) { 
 
 #country-chart {
     min-height: 25vh;
 }
+
+article.row, aside.row {
+    padding-top:3.5rem;
+}
+
 
 }
