@@ -1,15 +1,7 @@
-/*
-GET https://api.smartable.ai/coronavirus/stats/global HTTP/1.1
+//This code is from Simplemaps.com
+let mapCountryList = {};
 
-Cache-Control: no-cache
-Subscription-Key: d00c7834e9704372bad71fff4f715467
-*/
-
-
-
-var mapCountryList = {};
-
-var simplemaps_worldmap_mapdata={
+let simplemaps_worldmap_mapdata={
         main_settings: {
             //General settings
                 width: "responsive",

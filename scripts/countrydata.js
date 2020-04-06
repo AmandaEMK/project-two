@@ -102,9 +102,7 @@ function loadCountryData(id) {
     ], {
 				xaxis: {
 					mode: "time",
-                    //timeformat: "%y-%m-%dT%H:%M:%S",
                     timeBase: "milliseconds",
-                    //autoScale: "none"
                     min: firstDay
                 },
                 yaxis: [
@@ -115,11 +113,11 @@ function loadCountryData(id) {
             
 })
 .fail(function () {
-    alert("Error");
+    console.log("Error: Country data cannot be displayed at this moment");
 });
 }
 
-// Fix chart "dissappearing" when on mobile
+// Fix chart "disappearing" when on mobile
 window.addEventListener("resize", function(){
     let height = $("#country-chart").height();
     $(".chart-container").height(height);
