@@ -43,7 +43,7 @@ $.ajax({
 
 })
 .fail(function () {
-    document.write("Error: Data could not be loaded");
+    console.log("Error");
 });
 
 function loadCountryData(id) {
@@ -113,11 +113,11 @@ function loadCountryData(id) {
             
 })
 .fail(function () {
-    document.write("Error: Country stats could not be loaded");
+    console.log("Error");
 });
 }
 
-// Fix chart "disappearing" when on mobile by giving it a height
+// Fix chart "dissappearing" when on mobile
 window.addEventListener("resize", function(){
     let height = $("#country-chart").height();
     $(".chart-container").height(height);

@@ -1,8 +1,6 @@
-//This code is from SimpleMaps
+var mapCountryList = {};
 
-let mapCountryList = {};
-
-let simplemaps_worldmap_mapdata={
+var simplemaps_worldmap_mapdata={
         main_settings: {
             //General settings
                 width: "responsive",
