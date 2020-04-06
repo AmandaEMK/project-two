@@ -9,27 +9,23 @@ $.ajax({
         },
     })
 
-//.done(function (data) {
 .done(data => {
-    console.log(data);
     let countries = data.stats.breakdowns;
-    console.log(countries);
 
     for (let i=0; i<countries.length; i++) {
-        console.log(countries[i]);
         let countryName = countries[i].location.countryOrRegion;
         let isoCode = countries[i].location.isoCode;
         let country = { 
             name: countryName,
             //use object literals instead --v
-            description: "Confirmed cases: " + countries[i].totalConfirmedCases + "<br>Deaths: " + countries[i].totalDeaths + "<br>Recovered: " + countries[i].totalRecoveredCases,
+            description:`Confirmed cases:${countries[i].totalConfirmedCases}<br>Deaths:${countries[i].totalDeaths}<br>Recovered:${countries[i].totalRecoveredCases}`,
             color: "#88A4BC",
             hover_color: "default",
             url: ""
         };
         
         // Fix known broken countries
-        if (isoCode) { //google == vs === javascript
+        if (isoCode) {
             mapCountryList[isoCode.toUpperCase()] = country;
         } 
         
@@ -41,13 +37,8 @@ $.ajax({
     simplemaps_worldmap.load();
 
 })
-.fail(function () {
-    console.log("Error");
-});
 
 function loadCountryData(id) {
-    console.log(id);
-
     $.ajax({
     type: "GET",
     url: "https://api.smartable.ai/coronavirus/stats/" + id,
@@ -58,8 +49,8 @@ function loadCountryData(id) {
         xhrObj.setRequestHeader("Subscription-Key", "d00c7834e9704372bad71fff4f715467");
         },
     })
-.done(function (data) {
-    
+
+.done(data => {
     
     let chartDataConfirmed = [];
     let chartDataDeaths = [];
@@ -111,9 +102,6 @@ function loadCountryData(id) {
             });
             
 })
-.fail(function () {
-    console.log("Error");
-});
 }
 
 // Fix chart "dissappearing" when on mobile
