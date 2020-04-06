@@ -1,6 +1,6 @@
 //Fix zeros missing in date on news
 
-function addLeadingZeroes(n) {
+const addLeadingZeroes = (n) => {
     if(n < 10) {
         return "0" + n;
     }

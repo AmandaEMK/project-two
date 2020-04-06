@@ -5,6 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=PT+Sans&display=swap');</style>
+    <title>COVID-19 news and data</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> <a class="navbar-brand" href="#">COVID-19 news and stats</a>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="navbar-nav ml-md-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#map">Map</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#news">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+        </nav>
+        <section class="row" id="map">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                    <h1 class="text-center">COVID-19 world map</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="worldmap">
+                            <span class="sr-only">Sorry, the world map displaying the latest statistics on COVID-19 is not screen reader compatible</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <div id="country-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row"  id="news">
+            <div class="col-md-12">
+                <h1 class="text-center">Latest news</h1>
+            </div>
+            <div class="col-md-12">
+                <section class="container" >
+                        <div class="row" id="newsArticles">
+                            <div class="col-md-4 newsArticleTemplate my-3" id="newsArticleTemplate">
+                                <div class="card box-shadow h-100">
+                                    <a href="News url placeholder" class="article-url">
+                                        <img class="card-img-top" src="Image source placeholder" alt="Photo from news article">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="News url placeholder" class="article-url">
+                                            <h5 class="card-title">News title placeholder</h5>
+                                        </a>
+                                        <p class="card-text card-description">
+                                            Article excerpt placeholder
+                                        </p>
+                                        <small>
+                                            <p class="text-secondary">
+                                                <i class="fas fa-clock"></i>
+                                                <span class="time-stamp text-secondary">
+                                                    Time stamp placeholder
+                                                </span>
+                                                <i class="fas fa-newspaper"></i>
+                                                <a href="Provider domain placeholder" class="news-outlet">
+                                                    News outlet placeholder
+                                                </a>
+                                            </p>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </section>
+        <section class="row"  id="about">
+            <div class="col-md-12">
+                <h1 class="text-center">About</h1>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">This website uses Smartable AI's <a href="https://smartable.ai/">COVID-19 api</a> to ensure that all the news and numbers we bring you are fact-checked and accurate.</p>
+            </div>
+        </section>
+        <section class="row" id="contact">
+            <div class="col-md-12">
+                <h1 class="text-center">Contact</h1>
+            </div>
+            <div class="col-md-12">
+                <p  class="text-center">Suggestions? Get in touch via <a href="mailto:email@email.com">email@email.com</a></p>
+            </div>
+        </section>
+        <footer class="footer py-3">
+            <div class="container">
+                <p class="text-center text-muted"><small>© 2020</small></p>
+            </div>
+        </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.5.0/globalize.min.js" integrity="sha256-FPFqSDunIsLNTReZLSLiMpvDhPMVfzBje4xa7ih0/Gk=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js" integrity="sha256-LMe2LItsvOs1WDRhgNXulB8wFpq885Pib0bnrjETvfI=" crossorigin="anonymous"></script>
@@ -14,117 +122,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js" integrity="sha256-EM0o7Qv7O213xqRbn8IFc6QsSr02kAX1/z7musSfxx8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <style>@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=PT+Sans&display=swap');</style>
-    <title>COVID-19 news and data</title>
-</head>
-<body>
-    <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="navbar-toggler-icon"></span>
-				</button> <a class="navbar-brand" href="#">COVID-19 news and stats</a>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="navbar-nav ml-md-auto">
-						<li class="nav-item">
-							 <a class="nav-link" href="#map">Map</a>
-						</li>
-                        <li class="nav-item">
-							 <a class="nav-link" href="#news">News</a>
-						</li>
-                        <li class="nav-item">
-							 <a class="nav-link" href="#about">About</a>
-						</li>
-                        <li class="nav-item">
-							 <a class="nav-link" href="#contact">Contact</a>
-						</li>
-					</ul>
-				</div>
-    </nav>
-	<article class="row" id="map">
-		<div class="col-md-12">
-        	<div class="row">
-                <div class="col-md-12">
-                   <h1 class="text-center">COVID-19 world map</h1>
-			    </div>
-            </div>
-			<div class="row">
-				<div class="col-md-8">
-                    <div id="worldmap">
-                        <span class="sr-only">Sorry, the world map displaying the latest statistics on COVID-19 is not screen reader compatible</span>
-                    </div>
-				</div>
-				<div class="col-md-4">
-                    <div class="chart-container">
-                        <div id="country-chart"></div>
-                    </div>
-				</div>
-			</div>
-		</div>
-	</article>
-	<article class="row"  id="news">
-		<div class="col-md-12">
-            <h1 class="text-center">Latest news</h1>
-		</div>
-		<div class="col-md-12">
-            <section class="container" >
-                    <div class="row" id="newsArticles">
-                        <div class="col-md-4 newsArticleTemplate my-3" id="newsArticleTemplate">
-                            <div class="card box-shadow h-100">
-                                <a href="News url placeholder" class="article-url">
-                                    <img class="card-img-top" src="Image source placeholder" alt="Photo from news article">
-                                </a>
-                                <div class="card-body">
-                                    <a href="News url placeholder" class="article-url">
-                                        <h5 class="card-title">News title placeholder</h5>
-                                    </a>
-                                    <p class="card-text">
-                                        Article excerpt placeholder
-                                    </p>
-                                    <small>
-                                        <p class="text-secondary">
-                                            <i class="fas fa-clock"></i>
-                                            <span class="time-stamp text-secondary">
-                                                Time stamp placeholder
-                                            </span>
-                                            <i class="fas fa-newspaper"></i>
-                                            <a href="Provider domain placeholder" class="news-outlet">
-                                                News outlet placeholder
-                                            </a>
-                                        </p>
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-		</div>
-	</article>
-	<aside class="row"  id="about">
-        <div class="col-md-12">
-            <h1 class="text-center">About</h1>
-		</div>
-		<div class="col-md-12">
-            <p class="text-center">This website uses Smartable AI's <a href="https://smartable.ai/">COVID-19 api</a> to ensure that all the news and numbers we bring you are fact-checked and accurate.</p>
-		</div>
-	</aside>
-	<aside class="row" id="contact">
-    	<div class="col-md-12">
-            <h1 class="text-center">Contact</h1>
-		</div>
-		<div class="col-md-12">
-            <p  class="text-center">Suggestions? Get in touch via <a href="mailto:email@email.com">email@email.com</a></p>
-		</div>
-	</aside>
-    <footer class="footer py-3">
-        <div class="container">
-            <p class="text-center text-muted"><small>© 2020</small></p>
-        </div>
-    </footer>
-</div>
-<script type="text/javascript" src="scripts/mapdata.js"></script>		
-<script  type="text/javascript" src="scripts/worldmap.js"></script>
-<script  type="text/javascript" src="scripts/countrydata.js"></script>
-<script  type="text/javascript" src="scripts/news.js"></script>
+    <script type="text/javascript" src="scripts/mapdata.js"></script>		
+    <script  type="text/javascript" src="scripts/worldmap.js"></script>
+    <script  type="text/javascript" src="scripts/countrydata.js"></script>
+    <script  type="text/javascript" src="scripts/news.js"></script>
 </body>
 </html>

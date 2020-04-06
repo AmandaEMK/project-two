@@ -9,7 +9,8 @@ $.ajax({
         },
     })
 
-.done(function (data) {
+//.done(function (data) {
+.done(data => {
     console.log(data);
     let countries = data.stats.breakdowns;
     console.log(countries);
@@ -18,21 +19,19 @@ $.ajax({
         console.log(countries[i]);
         let countryName = countries[i].location.countryOrRegion;
         let isoCode = countries[i].location.isoCode;
-        let country = {
+        let country = { 
             name: countryName,
+            //use object literals instead --v
             description: "Confirmed cases: " + countries[i].totalConfirmedCases + "<br>Deaths: " + countries[i].totalDeaths + "<br>Recovered: " + countries[i].totalRecoveredCases,
             color: "#88A4BC",
             hover_color: "default",
             url: ""
         };
         
-
         // Fix known broken countries
-        if (isoCode != null) {
+        if (isoCode) { //google == vs === javascript
             mapCountryList[isoCode.toUpperCase()] = country;
-        } else {
-            console.log("No iso code for country " + countryName);
-        }
+        } 
         
     }
     simplemaps_worldmap_mapdata.state_specific = mapCountryList;
@@ -68,7 +67,7 @@ function loadCountryData(id) {
 
     let history = data.stats.history;
 
-    let firstDay = null;
+    let firstDay;
 
     for (let i=0; i<history.length; i++) {
         
@@ -84,7 +83,7 @@ function loadCountryData(id) {
             chartDataRecovered.push(pointRecovered);
         }
 
-        if (firstDay == null && history[i].confirmed>0) {
+        if (!firstDay && history[i].confirmed>0) {
             firstDay = new Date(history[i].date).getTime();
         }
     }
