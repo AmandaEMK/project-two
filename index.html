@@ -20,13 +20,13 @@
 </head>
 <body>
     <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="navbar-toggler-icon"></span>
 				</button> <a class="navbar-brand" href="#">COVID-19 news and stats</a>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="navbar-nav ml-md-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							 <a class="nav-link" href="#map">Map</a>
 						</li>
                         <li class="nav-item">
@@ -71,11 +71,28 @@
                     <div class="row" id="newsArticles">
                         <div class="col-md-4 newsArticleTemplate my-3" id="newsArticleTemplate">
                             <div class="card box-shadow h-100">
-                                <a href="News url placeholder" class="article-url"><img class="card-img-top" src="Image source placeholder" alt="Photo from news article"></a>
+                                <a href="News url placeholder" class="article-url">
+                                    <img class="card-img-top" src="Image source placeholder" alt="Photo from news article">
+                                </a>
                                 <div class="card-body">
-                                <a href="News url placeholder" class="article-url"><h5 class="card-title">News title placeholder</h5></a>
-                                <p class="card-text">Article excerpt placeholder</p>
-                                <small><p class="text-secondary"><i class="fas fa-clock"></i><span class="time-stamp text-secondary">Time stamp placeholder</span><i class="fas fa-newspaper"></i><a href="Provider domain placeholder" class="news-outlet">News outlet placeholder</a></small></p>
+                                    <a href="News url placeholder" class="article-url">
+                                        <h5 class="card-title">News title placeholder</h5>
+                                    </a>
+                                    <p class="card-text">
+                                        Article excerpt placeholder
+                                    </p>
+                                        <small>
+                                        <p class="text-secondary">
+                                        <i class="fas fa-clock"></i>
+                                            <span class="time-stamp text-secondary">
+                                                Time stamp placeholder
+                                            </span>
+                                        <i class="fas fa-newspaper"></i>
+                                            <a href="Provider domain placeholder" class="news-outlet">
+                                                News outlet placeholder
+                                            </a>
+                                        </small>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +105,7 @@
             <h1 class="text-center">About</h1>
 		</div>
 		<div class="col-md-12">
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates perspiciatis officia voluptas pariatur minus autem quisquam vero! Eaque, illo molestias officia, sed voluptatibus minus iure quis accusantium architecto quam odit!</p>
+            <p class="text-center">This website uses Smartable AI's <a href="https://smartable.ai/">COVID-19 api</a> to ensure that all the news and numbers we bring you are fact-checked and accurate.</p>
 		</div>
 	</aside>
 	<aside class="row" id="contact">
@@ -96,9 +113,14 @@
             <h1 class="text-center">Contact</h1>
 		</div>
 		<div class="col-md-12">
-            <p  class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta exercitationem incidunt qui blanditiis laboriosam. Aut reiciendis pariatur possimus itaque eos consectetur? Libero et natus nesciunt inventore autem! Et, repellat nesciunt.</p>
+            <p  class="text-center">Suggestions? Get in touch via <a href="mailto:email@email.com">email@email.com<a/></p>
 		</div>
 	</aside>
+    <footer class="footer py-3">
+        <div class="container">
+            <p class="text-center text-muted"><small>© 2020</small></p>
+        </div>
+    </footer>
 </div>
 <script type="text/javascript" src="scripts/mapdata.js"></script>		
 <script  type="text/javascript" src="scripts/worldmap.js"></script>

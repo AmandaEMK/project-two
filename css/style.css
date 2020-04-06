@@ -1,3 +1,7 @@
+body {
+ padding-top: 5rem;
+}
+
 p, span, div, li {
  font-family: 'PT sans', serif;
 }
@@ -34,6 +38,10 @@ h1 {
     height: 15vw;
     object-fit: cover;
     min-height: 30vh;
+}
+
+.custom-navbar {
+    background-color:#ffffff!important;
 }
 
 @media (max-width: 767.98px) { 
