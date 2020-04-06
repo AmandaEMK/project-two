@@ -11,14 +11,14 @@ $.ajax({
 
 .done(function (data) {
     console.log(data);
-    var countries = data.stats.breakdowns;
+    let countries = data.stats.breakdowns;
     console.log(countries);
 
-    for (var i=0; i<countries.length; i++) {
+    for (let i=0; i<countries.length; i++) {
         console.log(countries[i]);
-        var countryName = countries[i].location.countryOrRegion;
-        var isoCode = countries[i].location.isoCode;
-        var country = {
+        let countryName = countries[i].location.countryOrRegion;
+        let isoCode = countries[i].location.isoCode;
+        let country = {
             name: countryName,
             description: "Confirmed cases: " + countries[i].totalConfirmedCases + "<br>Deaths: " + countries[i].totalDeaths + "<br>Recovered: " + countries[i].totalRecoveredCases,
             color: "#88A4BC",
@@ -62,25 +62,25 @@ function loadCountryData(id) {
 .done(function (data) {
     
     
-    var chartDataConfirmed = [];
-    var chartDataDeaths = [];
-    var chartDataRecovered = [];
+    let chartDataConfirmed = [];
+    let chartDataDeaths = [];
+    let chartDataRecovered = [];
 
-    var history = data.stats.history;
+    let history = data.stats.history;
 
-    var firstDay = null;
+    let firstDay = null;
 
-    for (var i=0; i<history.length; i++) {
+    for (let i=0; i<history.length; i++) {
         
-        var pointConfirmed = [new Date(history[i].date).getTime(), history[i].confirmed];
+        let pointConfirmed = [new Date(history[i].date).getTime(), history[i].confirmed];
         chartDataConfirmed.push(pointConfirmed);
         if (history[i].deaths > 0) {
-            var pointDeaths = [new Date(history[i].date).getTime(), history[i].deaths];
+            let pointDeaths = [new Date(history[i].date).getTime(), history[i].deaths];
             chartDataDeaths.push(pointDeaths);
         }
         
         if (history[i].recovered > 0) {
-            var pointRecovered = [new Date(history[i].date).getTime(), history[i].recovered];
+            let pointRecovered = [new Date(history[i].date).getTime(), history[i].recovered];
             chartDataRecovered.push(pointRecovered);
         }
 
@@ -121,6 +121,6 @@ function loadCountryData(id) {
 
 // Fix chart "dissappearing" when on mobile
 window.addEventListener("resize", function(){
-    var height = $("#country-chart").height();
+    let height = $("#country-chart").height();
     $(".chart-container").height(height);
 });
