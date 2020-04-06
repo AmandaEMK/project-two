@@ -1,6 +1,6 @@
 $.ajax({
     type: "GET",
-    url: "https://api.smartable.ai/coronavirus/news/CA",
+    url: "https://api.smartable.ai/coronavirus/news/GB",
 
     // Request headers
     beforeSend: function(xhrObj) {
@@ -37,5 +37,5 @@ $.ajax({
 })
 
 .fail(function () {
-    alert("error");
+    alert("Error");
 });
