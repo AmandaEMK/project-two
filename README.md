@@ -4,7 +4,7 @@ A website displaying COVID-19 stats country by country on a world map. Stats in 
  
 ## Demo
 
-You can find a live demo of the site on [](GitHub pages. (FIX THIS)  
+You can find a live demo of the site on [https://amandaemk.github.io/project-two/](GitHub pages)
 
 ## UX
  
@@ -102,4 +102,4 @@ The project has been backed up using Git. It is deployed on GitHub Pages directl
 ### Special thanks
 
 - Big thank you to my mentor for all his guidance and encouragement
-- This project would not have been anything near what it is if it wasn't for the patience and educational efforts of my coder friends who have spent countless hours tirelessly explaining the same things to me over and over again until they finally clicked, made inspiring suggestions on how things could potentionally be solved, and always took the time to point me in the right direction when I was lost or had gotten stuck. Thank you!
+- This project would not have been anything near what it is if it wasn't for the patience and educational efforts of my friends who have spent countless hours tirelessly explaining the same things to me over and over again until they finally clicked, made inspiring suggestions on how things could potentionally be solved, and always took the time to point me in the right direction when I was lost or had gotten stuck. Thank you!
