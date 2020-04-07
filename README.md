@@ -25,7 +25,7 @@ You can find the wiresframes for the project in the wireframes folder.
 
 The features on mobile are the same as on desktop.
  
-### Existing Features
+### Existing features
 
 - World map
     - The main part of the project is the interactive world map displaying the latest COVID-19 data. When you hover a country, you can see the latest stats in a pop-up. If you click a country, a chart will load displaying historic stats.
@@ -39,11 +39,11 @@ The features on mobile are the same as on desktop.
 - Contact
     - In case someone would have something to say
 
-### Features Left to Implement
+### Potential future features
 
 More charts and the ability to select region for news (and perhaps load more articles) would be good things to add in the future.
 
-## Technologies Used
+## Technologies used
 
 - [JQuery](https://jquery.com)
     - To make DOM manipulation easier
@@ -71,18 +71,20 @@ More charts and the ability to select region for news (and perhaps load more art
 
 ## Testing
 
-- CSS and HTML comes back error free when run through [W3C Markup Validation Service](https://validator.w3.org/)
+CSS and HTML comes back error free when run through [W3C Markup Validation Service](https://validator.w3.org/)
 
 Since the project is pretty straight forward and there isn't much to test in Jasmine anyway, I opted against it and went with manual testing.
 
-- "As a user, I want to see the latest stats for various countries around the world"
+### User story testing
+
+**"As a user, I want to see the latest stats for various countries around the world"**
 
 1. World map:
     1. Zoom in on the map and hover a country
     2. Make sure data appears in the pop-up
     3. Click a country and ensure that the chart displaying the right data appears next to it
 
-- "As a user, I want to find the latest news on COVID-19 in the UK while avoiding fake news"
+**"As a user, I want to find the latest news on COVID-19 in the UK while avoiding fake news"**
 
 1. News section:
     1. Go to the News section by clicking the "News" link in navigation bar
@@ -97,7 +99,7 @@ The project has been backed up using Git. It is deployed on GitHub Pages directl
 
 ## Credits
 
-### Acknowledgements
+### Special thanks
 
-- I received inspiration for this project from X
-- https://www.w3schools.com/ - 
+- Big thank you to my mentor for all his guidance and encouragement
+- This project would not have been anything near what it is if it wasn't for the patience and educational efforts of my coder friends who have spent countless hours tirelessly explaining the same things to me over and over again until they finally clicked, made inspiring suggestions on how things could potentionally be solved, and always took the time to point me in the right direction when I was lost or had gotten stuck. Thank you!
