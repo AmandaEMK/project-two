@@ -1,19 +1,21 @@
 # COVID-19 stats and news
 
-A website displaying COVID-19 stats country by country on a world map. Data coming from an API and same for news.
+A website displaying COVID-19 stats country by country on a world map. Stats in world map are supplied by an API, and same things goes for the news - they're also being fed by an API.
  
+## Demo
+
+You can find a live demo of the site on [](GitHub pages. (FIX THIS)  
+
 ## UX
  
-A simple(???) user interface allows the user to easily navigate the page??? What to write even christ
+The goal of the project is simply to display some basic stats and news related to COVID-19. Keeping this in mind I felt that an uncomplicated, clean design would
+allow for the best possible user experience. I purposely avoided a sensationalistic use of colours (ie red for fatalities in the chart).
 
-Use this section to provide insight into your UX process, focusing on who this website is for,
-what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
 ### User stories
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
+- As a user, I want to see the latest stats for various countries around the world
+- As a user, I want to find the latest news on COVID-19 in the UK while avoiding fake news
 
 ### Wireframes
 
@@ -21,23 +23,25 @@ You can find the wiresframes for the project in the wireframes folder.
 
 ## Features
 
-The main part of the project is the interactive world map displaying the latest COVID-19 data.
-When you hover a country, you can see the latest stats in a pop-up. If you click a country, a chart will load displaying historic stats.
-
-There is also a news section displaying a selection of the latest UK news on COVID-19.
-
-About for more info and giving credit to sources, and contact in case someone would have something to say.
+The features on mobile are the same as on desktop.
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+- World map
+    - The main part of the project is the interactive world map displaying the latest COVID-19 data. When you hover a country, you can see the latest stats in a pop-up. If you click a country, a chart will load displaying historic stats.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- News
+    - The news section displaying a selection (6 articles) of the latest UK news on COVID-19.
+
+- About
+    - For more info and giving credit to the API I'm using
+
+- Contact
+    - In case someone would have something to say
 
 ### Features Left to Implement
-- Another feature idea
+
+More charts and the ability to select region for news (and perhaps load more articles) would be good things to add in the future.
 
 ## Technologies Used
 
@@ -63,39 +67,33 @@ In addition, you may also use this section to discuss plans for additional featu
     - Created my wireframes using Balsamiq
     
 - [Layoutit](https://www.layoutit.com/)
-     - Used this bootstrap grid generator for the basic layout to save myself some time
-
+     - Used this bootstrap grid generator to create the basic layout
 
 ## Testing
 
-CSS and HTML comes back error free when run through [W3C Markup Validation Service](https://validator.w3.org/)
+- CSS and HTML comes back error free when run through [W3C Markup Validation Service](https://validator.w3.org/)
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
+Since the project is pretty straight forward and there isn't much to test in Jasmine anyway, I opted against it and went with manual testing.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach,
-link to the test file(s) and explain how to run them.
+- "As a user, I want to see the latest stats for various countries around the world"
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant.
-A particularly useful form for describing your testing process is via scenarios, such as:
+1. World map:
+    1. Zoom in on the map and hover a country
+    2. Make sure data appears in the pop-up
+    3. Click a country and ensure that the chart displaying the right data appears next to it
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+- "As a user, I want to find the latest news on COVID-19 in the UK while avoiding fake news"
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+1. News section:
+    1. Go to the News section by clicking the "News" link in navigation bar
+    2. Click on all the links (article photo, title and news outlets link) and make sure they work and take you to the right place
+    3. (Since the API I chose uses AI technology to spot fake news, I'd say one is safe from them on here)
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+The project has been tested on, and is optimised for, the latst version of Chrome for Mac OS (as of 6 April 2020). It has also been tested on iPhone X and iPad Pro.
 
 ## Deployment
 
-This project is hosted on GitHub pages and deployed from the master branch.
-
+The project has been backed up using Git. It is deployed on GitHub Pages directly from the master branch. The development version and the deployed one are the same.
 
 ## Credits
 
