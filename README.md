@@ -4,7 +4,7 @@ A website displaying COVID-19 stats country by country on a world map. Stats in 
  
 ## Demo
 
-You can find a live demo of the site on [https://amandaemk.github.io/project-two/](GitHub pages)
+You can find a live demo of the site on [GitHub pages](https://amandaemk.github.io/project-two/)
 
 ## UX
  
@@ -91,7 +91,7 @@ Since the project is pretty straight forward and there isn't much to test in Jas
     2. Click on all the links (article photo, title and news outlets link) and make sure they work and take you to the right place
     3. (Since the API I chose uses AI technology to spot fake news, I'd say one is safe from them on here)
 
-The project has been tested on, and is optimised for, the latst version of Chrome for Mac OS (as of 6 April 2020). It has also been tested on iPhone X and iPad Pro.
+The project has been tested on, and is optimised for, the latst version of Chrome for Mac OS (as of 6 April 2020). It has also been tested on iPhone X and iPad Pro, and found to work well.
 
 ## Deployment
 
