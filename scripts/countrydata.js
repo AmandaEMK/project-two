@@ -17,8 +17,7 @@ $.ajax({
         let isoCode = countries[i].location.isoCode;
         let country = { 
             name: countryName,
-            //use object literals instead --v
-            description:`Confirmed cases:${countries[i].totalConfirmedCases}<br>Deaths:${countries[i].totalDeaths}<br>Recovered:${countries[i].totalRecoveredCases}`,
+            description:`Confirmed cases: ${countries[i].totalConfirmedCases}<br>Deaths: ${countries[i].totalDeaths}<br>Recovered: ${countries[i].totalRecoveredCases}`,
             color: "#88A4BC",
             hover_color: "default",
             url: ""
@@ -104,7 +103,7 @@ function loadCountryData(id) {
 })
 }
 
-// Fix chart "dissappearing" when on mobile
+// Fix chart "disappearing" when on mobile
 window.addEventListener("resize", function(){
     let height = $("#country-chart").height();
     $(".chart-container").height(height);

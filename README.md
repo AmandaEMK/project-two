@@ -41,7 +41,7 @@ The features on mobile are the same as on desktop.
 
 ### Potential future features
 
-More charts and the ability to select region for news (and perhaps load more articles) would be good things to add in the future.
+More charts and the ability to select region for news (and perhaps load more articles too) would be good things to add in the future.
 
 ## Technologies used
 
@@ -73,9 +73,23 @@ More charts and the ability to select region for news (and perhaps load more art
 
 CSS and HTML comes back error free when run through [W3C Markup Validation Service](https://validator.w3.org/)
 
-Since the project is pretty straight forward and there isn't much to test in Jasmine anyway, I opted against it and went with manual testing.
+Since the project is pretty straight forward and there isn't much to test in Jasmine anyway, I opted against it and went with manual testing only.
+
+The project has been continually tested on throughout the development process using the latest version of Chrome for Mac OS (as of 6 April 2020). It has also been tested on iPhone X and iPad Pro. It is optimised for these devices and browsers. 
+
+Examples of such continuous testing, what I cam across and how I dealt with it:
+- Links have been clicked to ensure that the open where they should (nav links in same tab, links out in new ones)
+- Where identified as necessary little css changes have been made to add to the responsability of the layout (media queries, responsive font sizes)
+- Since the chart was not showing up on mobile due to .chart-container not having an height, it was given the height of #country-chart using an event listener.
+- When formatting the dates in the news section, the leading zeroes were missing. This was resolved by adding a zero to the front of any number less than 10. This code is placed on top of the script since it won't work inside an ajax function.
+- Another things I found out as I was going along was that the statistics API did not have ISO codes for all countries. This is a problem since the map data is using ISO codes as the key, meaning it's not possible to insert country data without an ISO code. Instead of manually adding the ISO code all these countries, I decided just leave it (keeping the map work without them by making sure that any country without an IsoCode will be ignored) in the hopes of the API properly supplying them in the future. I set the default of state_description in mapdata.js to "No data" so that these countries would at least display something. I also changed the colour of them to a lighter colour, so that the user would be abe to clearly tell apart the ones with data from the ones without, and in that way avoid hovering "empty" countries which would be annoying and confusing.
+  
+You will find that the features are the same on mobile as on desktop. What does change slightly is the layout: instead of the map and chart being side by side in mobile, the chart will be potisioned underneath the map.
+Another thing is that on mobile, the news article cards are not displayed 3 x 2 like on desktop, but stacked on top of each other. On iPad Pro the layout will be similar to the one on desktop.
 
 ### User story testing
+
+After completing the project, I have performed the following two user story based tests both on mobile and in browser without running into any issues.
 
 **"As a user, I want to see the latest stats for various countries around the world"**
 
@@ -91,7 +105,6 @@ Since the project is pretty straight forward and there isn't much to test in Jas
     2. Click on all the links (article photo, title and news outlets link) and make sure they work and take you to the right place
     3. (Since the API I chose uses AI technology to spot fake news, I'd say one is safe from them on here)
 
-The project has been tested on, and is optimised for, the latst version of Chrome for Mac OS (as of 6 April 2020). It has also been tested on iPhone X and iPad Pro, and found to work well.
 
 ## Deployment
 
