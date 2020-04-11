@@ -23,7 +23,7 @@ $.ajax({
             url: ""
         };
         
-        // Fix known broken countries
+        // If the ISO code is null, data cannot be inserted 
         if (isoCode) {
             mapCountryList[isoCode.toUpperCase()] = country;
         } 
