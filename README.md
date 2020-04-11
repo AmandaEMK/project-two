@@ -11,7 +11,6 @@ You can find a live demo of the site on [GitHub pages](https://amandaemk.github.
 The goal of the project is simply to display some basic stats and news related to COVID-19. Keeping this in mind I felt that an uncomplicated, clean design would
 allow for the best possible user experience. I purposely avoided a sensationalistic use of colours (ie red for fatalities in the chart).
 
-
 ### User stories
 
 - As a user, I want to see the latest stats for various countries around the world
@@ -108,7 +107,7 @@ After completing the project, I have performed the following two user story base
 
 ## Deployment
 
-The project has been backed up using Git. It is deployed on GitHub Pages directly from the master branch. The development version and the deployed one are the same.
+The project has been developed in GitPod and is using Git for version control. It is deployed on GitHub Pages directly from the master branch. The development version and the deployed one are the same.
 
 ## Credits
 
